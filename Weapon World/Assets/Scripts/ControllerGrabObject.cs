@@ -12,8 +12,7 @@ public class ControllerGrabObject : MonoBehaviour {
 	private SteamVR_TrackedObject trackedObj;
 	private GameObject collidingObject;
 	private GameObject objectInHand;
-	private GameObject combinedObject = new GameObject();
-	public GameObject Prefab;
+    private GameObject combinedObject;
 	//SteamVR_Controller.Device device;
 
 	private SteamVR_Controller.Device Controller
@@ -84,11 +83,12 @@ public class ControllerGrabObject : MonoBehaviour {
 		objectInHand = null;
 	}
 
+    /*
 	private void Spawn()
 	{
-		Instantiate(Prefab, trackedObj.transform.position, trackedObj.transform.rotation);
+		Instantiate(objectInHand, trackedObj.transform.position, trackedObj.transform.rotation);
 	}
-		
+		*/
 	// Update is called once per frame
 	void Update () {
 
@@ -115,11 +115,6 @@ public class ControllerGrabObject : MonoBehaviour {
 
 				//}
 				}
-				else
-			{
-				Spawn();
-			
-			}
 		}
 
 		if (Controller.GetHairTriggerUp())

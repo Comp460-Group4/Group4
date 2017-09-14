@@ -9,11 +9,15 @@ public class Gun : MonoBehaviour {
     public Camera cam;
     public GameObject spawn;
     public GameObject bullet;
+    //public GameObject cPicker;
 
     private SteamVR_TrackedObject trackedObj;
     private bool isSpawn;
     private GameObject collidingObject;
     private string objectname;
+
+    public ColorManager manager;
+    private Color c;
 
     private SteamVR_Controller.Device Controller
     {
@@ -39,47 +43,12 @@ public class Gun : MonoBehaviour {
             isSpawn = false;
             if (Controller.GetHairTriggerDown())
             {
+                ChangeColor();
                 Shoot();
             }
         }
         
 	}
-
-    /*
-    private void SetCollidingObject(Collider col)
-    {
-        if (collidingObject || !col.GetComponent<Rigidbody>())
-        {
-            return;
-        }
-        collidingObject = col.gameObject;
-
-        if(col.gameObject.name == "SpawnGun")
-        {
-            isSpawn = true;
-            Debug.Log(isSpawn);
-        }
-        else
-        {
-            isSpawn = false;
-            Debug.Log(isSpawn);
-        }
-    }*/
-
-        /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name == "SpawnGun")
-        {
-            objectname = "SpawnGun";
-            Debug.Log(objectname);
-        }
-        else if(collision.gameObject.name == "PretendGun")
-        {
-            objectname = "PretendGun";
-            Debug.Log(objectname);
-        }
-    }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -104,7 +73,7 @@ public class Gun : MonoBehaviour {
         GameObject projectile;
         if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if(hit.transform.name == "SpawnGun")
             {
                 isSpawn = true;
@@ -136,7 +105,7 @@ public class Gun : MonoBehaviour {
         GameObject projectile;
         if(Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             projectile = Instantiate(spawn) as GameObject;
             projectile.transform.position = transform.position + trackedObj.transform.forward;
@@ -144,6 +113,12 @@ public class Gun : MonoBehaviour {
             Rigidbody rigidbody = projectile.GetComponent<Rigidbody>();
             rigidbody.velocity = trackedObj.transform.forward * 10;
         }
+    }
+
+    public Color ChangeColor()
+    {
+        c = manager.color;
+        return c;
     }
 
     Vector3 Spread(Vector3 aim, float distance, float variance)

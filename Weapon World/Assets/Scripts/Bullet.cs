@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     //public GameObject colorPicker;
     private GameObject go;
+    public Gun gun;
 
     //private ColorPickerTriangle picker;
     private Color bulletColor;
@@ -20,14 +21,15 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //bulletColor = picker.TheColor;
-        //ChangeColor();
-       
+        ChangeColor();
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        collision.gameObject.GetComponent<Renderer>().material.color = gun.ChangeColor();
+        Debug.Log(collision.gameObject.name);
+
     }
 
     public void ChangeColor()
@@ -35,6 +37,6 @@ public class Bullet : MonoBehaviour {
         //go = Instantiate(colorPicker) as GameObject;
         //picker = go.GetComponent<ColorPickerTriangle>();
         //picker.SetNewColor(bulletColor);
-        GetComponent<Renderer>().material.color = bulletColor;
+        //GetComponent<Renderer>().material.color = gun.ChangeColor();
     }
 }

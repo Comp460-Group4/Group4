@@ -80,10 +80,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AttachingObjects.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Scripts\ColorGun.cs" />
+    <Compile Include="Assets\Scripts\ColorHuePicker.cs" />
+    <Compile Include="Assets\Scripts\ColorIndicator.cs" />
+    <Compile Include="Assets\Scripts\ColorManager.cs" />
+    <Compile Include="Assets\Scripts\ColorSaturationBrightnessPicker.cs" />
     <Compile Include="Assets\Scripts\Combine.cs" />
     <Compile Include="Assets\Scripts\ControllerGrabObject.cs" />
+    <Compile Include="Assets\Scripts\Draggable.cs" />
+    <Compile Include="Assets\Scripts\ExampleColorReceiver.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\HSBColor.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SpawnGun.cs" />
     <Compile Include="Assets\Scripts\SpawnObject.cs" />
@@ -193,6 +201,9 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\ColorHue.shader" />
+    <None Include="Assets\Shaders\ColorSaturationBrightness.shader" />
+    <None Include="Assets\Shaders\SolidColor.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
@@ -204,6 +215,7 @@
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
     <None Include="Assets\SteamVR\readme.txt" />
+    <None Include="Assets\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
