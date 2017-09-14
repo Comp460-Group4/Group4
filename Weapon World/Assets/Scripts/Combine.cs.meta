@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 48c64bd9bc9c04845935738d3ebbc72e
+timeCreated: 1504412547
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - block: {instanceID: 0}
+  - laserPrefab: {fileID: 1164542118668908, guid: 36b0d988f07bc964088ea44c5d7916b7,
+      type: 2}
+  - cameraRigTransform: {instanceID: 0}
+  - teleportReticlePrefab: {instanceID: 0}
+  - headTransform: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

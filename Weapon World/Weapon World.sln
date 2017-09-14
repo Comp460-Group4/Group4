@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weapon World", "Weapon World.csproj", "{FEA75A7F-BB6B-A1E3-EB6B-4EBB0B043EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weapon World.Editor", "Weapon World.Editor.csproj", "{A1D42E58-CBFD-9E7D-B590-67551C6D5B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA75A7F-BB6B-A1E3-EB6B-4EBB0B043EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA75A7F-BB6B-A1E3-EB6B-4EBB0B043EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA75A7F-BB6B-A1E3-EB6B-4EBB0B043EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA75A7F-BB6B-A1E3-EB6B-4EBB0B043EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D42E58-CBFD-9E7D-B590-67551C6D5B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D42E58-CBFD-9E7D-B590-67551C6D5B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D42E58-CBFD-9E7D-B590-67551C6D5B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D42E58-CBFD-9E7D-B590-67551C6D5B79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
